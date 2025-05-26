@@ -1,4 +1,3 @@
-Overview
 An AI system that reads resume images, evaluates them using an AI model, and recommends the best IT job based on the candidate's skills and experience.
 Features
 •	Reads resume images using OCR
