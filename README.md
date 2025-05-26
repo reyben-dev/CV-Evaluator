@@ -1,57 +1,42 @@
-# CV-Evaluator
 Overview
-An AI-powered system that evaluates image-based resumes of IT professionals and recommends suitable job roles. It leverages OCR and LLMs to assess resume quality and provide career development insights.
+An AI system that reads resume images, evaluates them using an AI model, and recommends the best IT job based on the candidate's skills and experience.
 Features
-•	Extracts text from resume images using Tesseract OCR
-•	Analyzes resume content using Ollama's Gemma3:4B LLM
-•	Matches candidate skills to predefined IT job roles
-•	Provides a suitability score, strengths, weaknesses, and career advice
-System Architecture
-1. OCR Text Extraction
-Uses `pytesseract` and `Pillow` to extract text from image files.
-2. AI Analysis Engine
-Utilizes Ollama's `gemma3:4b` model to evaluate resumes on five key dimensions.
-3. Job Matching Algorithm
-Matches extracted skills with 8 predefined IT job roles using `scikit-learn` and `numpy`.
-Supported Formats
-• Image formats: PNG, JPG, JPEG, BMP, GIF
-• PDF support planned
-Job Roles Covered
-Job Title	Level	Key Skills
-Software Developer	Mid	Python, JavaScript, React, SQL, Git
-Data Scientist	Mid	Python, ML, Pandas, NumPy, Statistics
-Frontend Developer	Entry	JavaScript, React, HTML, CSS, TypeScript
-DevOps Engineer	Senior	Docker, Kubernetes, AWS, Linux, Python
-Project Manager	Senior	PM, Agile, Scrum, Leadership
-Junior Web Developer	Entry	HTML, CSS, JavaScript, PHP, MySQL
-Machine Learning Eng.	Senior	Python, TensorFlow, PyTorch, ML, DL
-Business Analyst	Mid	Excel, SQL, Data Analysis, BI, PowerBI
-Evaluation Criteria (0–10 scale)
-• Technical Skills Match: Skill relevance to job
-• Experience Level Fit: Experience suitability
-• Industry Knowledge: Domain familiarity
-• Education Alignment: Academic background
-• Overall Potential: Career trajectory
-Suitability Score Interpretation
-Score	Interpretation	System Response
-9–10	Exceptional Fit	Highly recommended
-7–8	Strong Fit	Minor enhancements needed
-5–6	Moderate Fit	Suitable with improvement
-3–4	Weak Fit	Major development needed
-1–2	Poor Fit	Career pivot advised
-Output Report
-• CV Analysis Summary: Key background and qualifications
-• Recommended Job Position: Best-fit title and context
-• Scoring Breakdown: Scores and explanations per category
-• Career Development Advice: Actionable steps and suggestions
-• Justification: Explanation of job match and skills alignment
-Technical Requirements
-•	Python 3.x
-•	`pytesseract`, `Pillow`, `requests`, `scikit-learn`, `numpy`
-•	Tesseract OCR installed
-•	Ollama server running with `gemma3:4b`
+•	Reads resume images using OCR
+•	Analyzes resume using AI (Gemma3:4B)
+•	Matches skills to job roles
+•	Gives feedback and career advice
+How It Works
+1. Extracts text from image (OCR)
+2. Analyzes content using AI model
+3. Matches candidate to 1 of 8 IT job roles
+Job Roles
+• Software Developer (Mid)
+• Data Scientist (Mid)
+• Frontend Developer (Entry)
+• DevOps Engineer (Senior)
+• Project Manager (Senior)
+• Junior Web Developer (Entry)
+• Machine Learning Engineer (Senior)
+• Business Analyst (Mid)
+Score Criteria (0–10)
+• Skills match
+• Experience level
+• Industry knowledge
+• Education fit
+• Career potential
+Output Includes
+• Summary of resume
+• Best job match
+• Score breakdown
+• Advice for improvement
+• Why the job fits
+Requirements
+• Python 3.x
+• Tesseract OCR installed
+• Ollama with Gemma3:4B running
+• Libraries: pytesseract, Pillow, requests, scikit-learn, numpy
 Limitations
-•	English-language resumes only
-•	IT-related positions only
-•	Standard layout formats recommended
-•	Creative portfolios and non-technical roles not supported
+• English resumes only
+• IT jobs only
+• Clear resume layouts only
+• No creative/non-technical resumes
